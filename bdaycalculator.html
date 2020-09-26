@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <title>Birthday-Calculator</title>
     <link rel="stylesheet" type="text/css" href="bdaycalculator.css" />
+    <script src="bdaycalculator.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,29 @@
     It is for that reason this web application was made,where people will be able to know at which day of the week 
     they were born, going from their gender detail and their birthday details they will provide through the 
     following form.
+
 </p>
+<form onsubmit="calculate(); return false">
+    <div>
+        Date<input type="number" min="1" max="31" id="date">  </input>
+    </div>
+    <div>
+        Month<input type="number" min="1" max="12" id="month">  </input>
+    </div>
+    <div>
+        Year<input type="number" min="1000" max="2020" id="year">  </input>
+    </div>
+    <div>
+        Gender 
+        <div>
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+        <div>
+            <input type="radio" name="gender" value="Male"> Male
+        </div>
+    </div>
+    <input type="submit" id="" value="submit"></input>
+</form>
 
 </body>
 
