@@ -1,5 +1,5 @@
 function calculate() {
-    var date = document.getElementById("date").value;
+    var day = document.getElementById("date").value;
     var month = document.getElementById("month").value;
     var year = document.getElementById("year").value;
     var gender = null;
@@ -7,8 +7,18 @@ function calculate() {
         gender = "Female"
     }
     else if(document.getElementById("male").checked){
-        gender = "male"
+        gender = "Male"
     }
-    
-    
+
+    else if(gender === null){
+        alert("Please choose gender")
+    }
+
+    // var CC = Math.floor(year / 100)
+    // var YY = Math.round(((year / 100) - CC) * 100)
+    // var DD = parseInt(day);
+    // var MM = parseInt(month);
+ 
+    var date = new Date(year + "/" + month +"/"+ day);
+    var d = date.getDay();//get day of the week
 }

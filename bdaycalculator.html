@@ -4,28 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
-    <title>Birthday-Calculator</title>
+    <title>Akan Names</title>
     <link rel="stylesheet" type="text/css" href="bdaycalculator.css" />
     <script src="bdaycalculator.js"></script>
 </head>
 
 <body>
-<h3> Description</h3>
+<h3> Akan Names</h3>
 <p>Most people do know when their birthdays are, but some might not know what day of the week they were born. 
     It is for that reason this web application was made,where people will be able to know at which day of the week 
-    they were born, going from their gender detail and their birthday details they will provide through the 
-    following form.
-
+    they were born, basing on their gender detail and their birthday details they will provide through the form.
+    Akan names are derived from the Ghanian culture, where they frequently name their children after the day of the week
+     they were born and the order in which they were born. 
+    These "day names" have further meanings concerning the soul and character of the person. 
+    Middle names have considerably more variety and can refer to their birth order, twin status, or an ancestor's middle name.
 </p>
 <form onsubmit="calculate(); return false">
     <div>
-        Date<input type="number" min="1" max="31" id="date">  </input>
+        
+        Date<input placeholder="date"  type="number" min="1" max="31" id="date" required > </input>
     </div>
     <div>
-        Month<input type="number" min="1" max="12" id="month">  </input>
+        Month<input placeholder="month" type="number" min="1" max="12" id="month" required>  </input>
     </div>
     <div>
-        Year<input type="number" min="1000" max="2020" id="year">  </input>
+        Year<input placeholder="year" type="number" min="1000" max="2020" id="year" required>  </input>
     </div>
     <div>
         Gender 
@@ -36,7 +39,7 @@
             <input type="radio" id="male" name="gender"> Male
         </div>
     </div>
-    <input type="submit" id="" value="submit"></input>
+    <input type="submit" id="sub" value="submit"></input>
 </form>
 
 </body>
