@@ -1,5 +1,5 @@
 body{
-    margin: 30px;
+    margin: 0px;
     
     background-color: rgb(200, 205, 216);
     background-position: center;
@@ -7,6 +7,7 @@ body{
 
 }
 #akn {
+    margin: 30px;
     text-align: center;
     color : rgb(44, 43, 43);
 }
@@ -29,10 +30,12 @@ body{
 .frm{
     width: 380px;
     height: 480px;
-    margin: 30px;
+    margin: 25px;
+    margin-bottom: 100px;
     position: relative;
     background: rgb(146, 146, 145);
     padding: 20px;
+    ;
 } 
 #date , #month , #year {
     border-radius: 10px;
@@ -41,3 +44,12 @@ body{
     
     
 }
+.footer {
+    
+    padding: 3px;
+    width: 100%;
+    background-color: rgba(26, 25, 25, 0.918);
+    color: rgb(252, 248, 248);
+    text-align: center;
+    
+  }
