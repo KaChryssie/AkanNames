@@ -3,14 +3,11 @@ function calculate() {
     var month = document.getElementById("month").value;
     var year = document.getElementById("year").value;
     var gender = null;
-    if(document.getElementById("female").checked){
+    if (document.getElementById("female").checked) {
         gender = "Female"
-    }
-    else if(document.getElementById("male").checked){
+    } else if (document.getElementById("male").checked) {
         gender = "Male"
-    }
-
-    else if(gender === null){
+    } else if (gender === null) {
         alert("Please choose gender")
     }
 
@@ -18,16 +15,27 @@ function calculate() {
     // var YY = Math.round(((year / 100) - CC) * 100)
     // var DD = parseInt(day);
     // var MM = parseInt(month);
- 
-    var date = new Date(year + "/" + month +"/"+ day);
-    var d = date.getDay();//get day of the week
-    var femaleNames = ['Akosua','Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
-    var maleNames = ['Kwasi','Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
-    var dayOfTheWeek =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    if(gender === "Female"){
-        alert("Your name is: " + femaleNames[d] + "and you were born on " + dayOfTheWeek[d] ) 
+
+    var date = new Date(year + "/" + month + "/" + day);
+    var d = date.getDay(); //get day of the week
+    var femaleNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
+    var maleNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+    var dayOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    if (day < 1 || day > 31) {
+        alert("invalid date");
+        return false;
     }
-    else if(gender === "Male"){
-        alert("Your name is: " + maleNames[d] + "and you were born on " + dayOfTheWeek[d] )
+    if (month < 1 || month > 12) {
+        alert("Invalid month");
+        return false;
+    }
+    if (year < 1000 || year > 2020) {
+        alert("invalid year");
+        return false;
+    }
+    if (gender === "Female") {
+        alert("Your name is: " + femaleNames[d] + "and you were born on " + dayOfTheWeek[d])
+    } else if (gender === "Male") {
+        alert("Your name is: " + maleNames[d] + "and you were born on " + dayOfTheWeek[d])
     }
 }
